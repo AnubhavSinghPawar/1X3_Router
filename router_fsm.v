@@ -3,11 +3,12 @@ module router_fsm(input clk,resetn,packet_valid,
 				  input fifo_full,fifo_empty_0,fifo_empty_1,fifo_empty_2,soft_reset_0,soft_reset_1,soft_reset_2,parity_done, low_packet_valid, 
 				  output write_enb_reg,detect_add,ld_state,laf_state,lfd_state,full_state,rst_int_reg,busy);
 				  
- parameter  decode_address		=	4'b0001,
+ parameter  
+			decode_address		=	4'b0001,
 			wait_till_empty		=	4'b0010,
 			load_first_data		=	4'b0011,
-			load_data			=	4'b0100,
-			load_parity			=	4'b0101,
+			load_data		=	4'b0100,
+			load_parity		=	4'b0101,
 			fifo_full_state		=	4'b0110,
 			load_after_full		=	4'b0111,
 			check_parity_error	=	4'b1000;
